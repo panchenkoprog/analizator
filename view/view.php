@@ -18,6 +18,7 @@ class View extends Service
     );
 
     public $current_file = 'index.php';// для формирования URL
+    public $current_detail_file = 'report.php';// для формирования URL
     public $separator_q  = '?';
     public $separator_v  = '=';
     public $separator_p  = '/';
@@ -55,11 +56,23 @@ class View extends Service
         $this->session = $session;
         $this->result  = $result;
 
-        $this->url = $this->separator_p
-                    . $this->current_file
-                    . $this->separator_q
-                    . $this->page
-                    . $this->separator_v;
+        //если пункт меню ПРОЕКТЫ -> ОТЧЁТЫ
+        if($num_menu == 1 && isset($_REQUEST['site_report']) && $_REQUEST['site_report'] != '')
+        {
+            $this->url = $this->separator_p
+                . $this->current_detail_file
+                . $this->separator_q
+                . $this->page
+                . $this->separator_v;
+        }
+        else
+        {
+            $this->url = $this->separator_p
+                . $this->current_file
+                . $this->separator_q
+                . $this->page
+                . $this->separator_v;
+        }
 
         $this->num_menu = $num_menu;
 

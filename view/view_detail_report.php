@@ -2,6 +2,10 @@
 
 class ViewDetailReport extends View
 {
+    public $exit_file = 'index.php';// для формирования URL
+    public $exit_url  = '';
+    public $current_file = 'report.php';// для формирования URL
+
     function ViewInit( $num_menu, $session = 0, $result = '' )
     {
         if(isset($_SESSION) && $_SESSION['login'] == parent::$login && $_SESSION['password'] == parent::$password)
@@ -26,6 +30,12 @@ class ViewDetailReport extends View
                     . $this->separator_q
                     . $this->page
                     . $this->separator_v;
+
+        $this->exit_url = $this->separator_p
+            . $this->exit_file
+            . $this->separator_q
+            . $this->page
+            . $this->separator_v;
 
         $this->num_menu = $num_menu;
 
