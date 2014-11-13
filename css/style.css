@@ -380,7 +380,8 @@ p.text-warning
     position: relative;
     display: table;
     padding: 20px 0px 0px 0px;
-    background-color: #E6E6FA;
+    background-color: #ffffff;
+    margin-bottom: 35px;
 }
 
 .div-bottom-menu
@@ -390,8 +391,8 @@ p.text-warning
     /*top: 40px;*/
     margin: 0 auto;
     /*margin: 15px auto;*/
-    padding: 1px 1px 1px 1px;
-    background-color: #4B4B48;
+    /*padding: 1px 1px 1px 1px;*/
+    background-color: #2AE1A8;
     border-radius: 2px;
     /*box-shadow: 0 0px 5px 3px rgb(211, 89, 44);*/
 }
@@ -413,7 +414,7 @@ p.text-warning
 .bottom-menu li a
 {
     float: left;
-    color: rgb(212, 212, 212);
+    color: rgb(7, 26, 13);
     padding: 11px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -424,12 +425,12 @@ p.text-warning
     /*background-color: coral;*/
     color: #4B4B48;
     font-weight: bold;
-    background-color: #cccccc;
+    background-color: rgba(255, 184, 64, 0.8);
 }
 
 .bottom-menu li a.activ
 {
-    background-color: coral;
+    background-color: #FFB840;
     color: #4B4B48;
     font-weight: bold;
     cursor: default;
@@ -438,7 +439,7 @@ p.text-warning
 .bottom-menu li span
 {
     float: left;
-    color: rgb(212, 212, 212);
+    color: rgb(7, 26, 13);
     padding: 11px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -446,7 +447,7 @@ p.text-warning
 
 .bottom-menu li span.activ
 {
-    background-color: coral;
+    background-color: #FFB840;
     color: #4B4B48;
     font-weight: bold;
     cursor: default;
