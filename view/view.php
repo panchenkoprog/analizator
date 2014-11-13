@@ -2,12 +2,12 @@
 
 class View extends Service
 {
-    private $ar_title_not_session = array(
+    public $ar_title_not_session = array(
         0 => 'Вход',
         1 => 'Регистрация'
     );
 
-    private $ar_title_session = array(
+    public $ar_title_session = array(
         0 => 'Анализ',
         1 => 'Проекты',//отчёты проекта, настройки проекта
         2 => 'Цены',
@@ -27,7 +27,7 @@ class View extends Service
     public $page         = 'page';
 
 
-    private $class    = "class='activ' ";
+    public $class    = "class='activ' ";
     public $title     = '';
     public $num_menu  = 0;
     public $url       = '';
@@ -72,10 +72,10 @@ class View extends Service
             $this->title = $this->ar_title_not_session[$num_menu];
         }
 
-        include_once('view_head.php');
-        include_once('view_menu.php');
-        include_once('view_content.php');
-        include_once('view_footer.php');
+        include_once('view/view_head.php');
+        include_once('view/view_menu.php');
+        include_once('view/view_content.php');
+        include_once('view/view_footer.php');
     }
 }
 ?>
