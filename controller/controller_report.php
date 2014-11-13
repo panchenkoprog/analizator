@@ -1,26 +1,9 @@
 <?php
-class Controller
+class ControllerReport extends Controller
 {
-    public $model = null; //класс модель
-    public $view  = null; //класс вид
-
-    public $current_file = 'index.php';// для формирования URL
-    public $separator_q  = '?';
-    public $separator_v  = '=';
-    public $separator_p  = '/';
-    public $separator_arguments = '&';
-    public $query        = 0;
-    public $path         = '';
-    public $result_db    = '';
-    public $session      = 0;//
-
-    function __construct( $obj_view = null )
+    function __construct()
     {
-        $this->model = new Model();
-        if($obj_view == null)
-            $this->view  = new View();
-        else
-            $this->view  = $obj_view;
+        parent::__construct( new ViewDetailReport());
     }
 
     function ControllerSession( $session )
@@ -117,11 +100,6 @@ class Controller
         {
             $this->view->ViewInit(0, $this->session);
         }
-    }
-
-    function Installation()
-    {
-        $this->model->ModelInstallService();
     }
 }
 ?>
