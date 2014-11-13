@@ -3,7 +3,7 @@
             echo 'login:' . $_SESSION['login'];
         }?></div>
     <div class="useremail"><?php if($this->session){
-            echo 'email:' . $_SESSION['email'];
+            echo "<span>email:</span>" . '<span class="email">' . $_SESSION['email'] . "</span>";
         }?></div>
     <div class="userbalance"><?php if($this->session){
              echo "<span>balance:</span>" . '<span class="balance">' . $_SESSION['balance'] ."</span>";

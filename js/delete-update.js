@@ -1668,6 +1668,10 @@ jQuery(document).ready(function()
                         ar[i].value = "";
                         jQuery(ar[i]).trigger("cut");//можно вызвать обработчик "input" но как говорится в мануале (не работает в IE<9)
                     }
+                    if(jQuery("div").is(".user-block") && jQuery("div").is(".useremail"))
+                    {
+                        jQuery("#email").val(jQuery("span.email").text());
+                    }
                 }
                 else
                 {
