@@ -392,7 +392,7 @@ p.text-warning
     margin: 0 auto;
     /*margin: 15px auto;*/
     /*padding: 1px 1px 1px 1px;*/
-    background-color: #2AE1A8;
+    background-color: rgb(215, 234, 226);
     border-radius: 2px;
     /*box-shadow: 0 0px 5px 3px rgb(211, 89, 44);*/
 }
