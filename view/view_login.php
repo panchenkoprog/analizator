@@ -1,6 +1,6 @@
 <div id="panel-login" class="block" style="display: none;">
         <div class="container">
-            <form id="myform" <?php echo "action='".$this->url.$this->num_menu."' enctype='multipart/form-data' method='POST'";?> >
+            <form id="form-login" <?php echo "action='".$this->url.$this->num_menu."' enctype='multipart/form-data' method='POST'";?> >
                 <span class="title">Вход</span>
                 <?php
                     /*if (isset($_REQUEST['submit']))

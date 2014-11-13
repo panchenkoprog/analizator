@@ -1,7 +1,7 @@
 <?php $_SESSION['key'] = md5((string)rand());?>
 <div id="panel-reg" class="block" style="display: none;">
     <div class="container">
-        <form id="myform" <?php echo "action='".$this->url.$this->num_menu."' enctype='multipart/form-data' method='POST'";?> >
+        <form id="form-register" <?php echo "action='".$this->url.$this->num_menu."' enctype='multipart/form-data' method='POST'";?> >
             <span class="title">Регистрация</span>
 
             <?php /*echo $this->result;*/ ?>
