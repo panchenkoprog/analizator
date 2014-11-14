@@ -23,10 +23,10 @@
             <tr>
                 <td></td>
                 <?php if(strlen($elem->site_name)>400){ ?>
-                    <td style="max-width: 400px;"><?php echo $elem->site_name; ?></td>  
+                    <td style="max-width: 400px;"><pre><?php echo $elem->site_name; ?></pre></td>
                 <?php } 
                 else{?>
-                <td style="max-width: 400px;"><pre><?php echo $elem->site_name; ?></pre></td>
+                    <td style="max-width: 400px;"><?php echo $elem->site_name; ?></td>
                 <?php }
                 if($elem->exist_db)
                    {
