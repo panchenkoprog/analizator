@@ -10,6 +10,11 @@ body{
     background-color: #ffffff;
 }
 
+pre{
+    background: none;
+    border: none;
+}
+
 .block{
     /*height: 200px;*/
     max-width: 100%;
