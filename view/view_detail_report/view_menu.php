@@ -17,12 +17,10 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> Профиль</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Настройки</a>
+                        <li><a href="<?php echo $this->exit_url . '1'; ?>"><i class="fa fa-user fa-fw"></i> Мои проекты</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="<?php echo $this->url . 'exit'; ?>"><i class="fa fa-sign-out fa-fw"></i> Выйти</a>
+                        <li><a href="<?php echo $this->exit_url . 'exit'; ?>"><i class="fa fa-sign-out fa-fw"></i> Выйти</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
