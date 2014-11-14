@@ -1,38 +1,51 @@
-<div>
-<span class="help-block"><b>Отчёт по загрузке</b></span>
-    <table>
-        <tr style="width: 1000px">
-            <th style="border: 1px solid coral; max-width: 350px;">URL</th>
-            <th style="border: 1px solid coral; max-width: 150px;">глубина</th>
-            <th style="border: 1px solid coral; max-width: 150px;">ответ</th>
-            <th style="border: 1px solid coral; max-width: 150px;">скорость(кбит/с)</th>
-            <th style="border: 1px solid coral; max-width: 150px;">размер(кб)</th>
-            <th style="border: 1px solid coral; max-width: 150px;">редирект</th>
-        </tr>
-        <?php
-        if(count(self::$detail_report->ar_load_table) > 0)
-        {
+<div class="row">
+     <div class="col-lg-12">
+         <h2 class="page-header">Отчёт по загрузке</h2>
+     </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>глубина</th>
+                        <th>ответ</th>
+                        <th>скорость(кбит/с)</th>
+                        <th>размер(кб)</th>
+                        <th>редирект</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                    if(count(self::$detail_report->ar_load_table) > 0)
+                    {
 
             foreach(self::$detail_report->ar_load_table as $page)
             {
                 ?>
-                <tr style="width: 1000px">
-                    <td style="border: 1px solid coral; max-width: 350px; font-size: 12px;"><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></td>
-                    <td style="border: 1px solid coral; max-width: 150px; font-size: 12px;"><?php echo $page['level_links']; ?></td>
-                    <td style="border: 1px solid coral; max-width: 150px; font-size: 12px;"><?php echo $page['http_code']; ?></td>
-                    <td style="border: 1px solid coral; max-width: 150px; font-size: 12px;"><?php echo round( ($page['page_speed'] / 1000) , 1); ?></td>
-                    <td style="border: 1px solid coral; max-width: 150px; font-size: 12px;"><?php echo round( ($page['page_size'] / 1024) , 2); ?></td>
-                    <td style="border: 1px solid coral; max-width: 150px; font-size: 12px;"><?php echo $page['redirect_url']; ?></td>
+                <tr>
+                    <td><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></td>
+                    <td><?php echo $page['level_links']; ?></td>
+                    <td><?php echo $page['http_code']; ?></td>
+                    <td><?php echo round( ($page['page_speed'] / 1000) , 1); ?></td>
+                    <td><?php echo round( ($page['page_size'] / 1024) , 2); ?></td>
+                    <td><?php echo $page['redirect_url']; ?></td>
                 </tr>
             <?php
             }
         }
         ?>
+                </tbody>
     </table>
-</div>
+    
 <?php
 if(count(self::$ar_a) > 1)//показываем пункты меню, если их больше одного
 {
     include_once('view_bottom_menu.php');
 }
 ?>
+         </div>
+    </div>
+</div>

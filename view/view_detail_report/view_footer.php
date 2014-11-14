@@ -1,14 +1,27 @@
-        <div class="footer" id="footer">
-            <div class="footer_text">&copy; <a href="http://stll.com.ua">stll.com.ua</a>&nbsp;&amp;&nbsp;Александр Панченко :)</div>
+
+
         </div>
+        <!-- /#page-wrapper -->
 
     </div>
+    <!-- /#wrapper -->
 
-    <div class="divright" id="divright">
-        <?php /*if(isset($_SESSION['user_session']) && $_SESSION['user_session'] == 1)include_once('view_user_window.php'); */?>
-    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-</div>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="/js/plugins/morris/raphael.min.js"></script>
+    <script src="/js/plugins/morris/morris.min.js"></script>
+    <script src="/js/plugins/morris/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/sb-admin-2.js"></script>
 
 </body>
 </html>

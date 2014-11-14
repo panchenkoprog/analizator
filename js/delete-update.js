@@ -1,4 +1,4 @@
-﻿/*//обработчик закрытия окна
+/*//обработчик закрытия окна
  window.onbeforeunload = function (event)
  {
  //window.onbeforeunload = null;

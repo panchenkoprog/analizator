@@ -1,6 +1,4 @@
-<div class="div-body">
-    <div class="content color" id="content">
-        <div class="container">
+    <div id="page-wrapper">
         <?php
         switch($this->num_menu)
         {
@@ -157,6 +155,4 @@
                 break;
         }
         ?>
-        </div>
     </div>
-</div>

@@ -1,45 +1,87 @@
-
-<?php 
-    if(!$this->session)
-    {
-       include_once('view_login.php'); 
-       include_once('view_register.php');
-    }
-?>
-<div class="header">
-    <div class="fon">
-        <div class="top-login"></div>
-        <div class="container">
-            <?php if($this->session)    
-            {
-                include_once('view_user_window.php');
-                include_once('view_logo.php');
-                ?>
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">MAS analizator</a>
             </div>
-        </div>
-    </div>
-                <ul class="top-menu">
-                <?php
-                for( $i=0; $i < count($this->ar_title_session); $i++)
-                { ?>
+            <!-- /.navbar-header -->
 
-                    <li>
-                        <a <?php if($i == $this->num_menu) echo $this->class; ?>href="<?php echo $this->url . $i; ?>"><?php echo $this->ar_title_session[$i]; ?></a>
-                    </li>
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> Профиль</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Настройки</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="<?php echo $this->url . 'exit'; ?>"><i class="fa fa-sign-out fa-fw"></i> Выйти</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
 
-                <?php } ?>
-               </ul>
-                
-            <?php } 
-                else {?>
-                <a href="#" class="but-reg" id="sub-reg">Регистрация</a>
-                <a href="#" class="but-log" id="sub-login">Вход</a>
-                <?php
-                    include_once('view_logo.php');
-                ?>
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <h3>Название сайта</h3>
+                        </li>
+                        <li>
+                            <a class="active" href="#"><i class="fa fa-cubes fa-fw"></i> Общая инфориация</a>
+                        </li>
+                        <li>
+                            <?php
+                                $url_load = $this->url.$this->num_menu.$this->separator_arguments
+                                ."report_name=".self::$detail_report->report_name.$this->separator_arguments
+                                ."p_show=load_table". $this->separator_arguments
+                                ."host=" . $_REQUEST['host'];
+                            ?>
+                            <a href="<?php echo $url_load;?>"><i class="fa fa-dashboard fa-fw"></i> Загрузка</a>
+                        </li>
+                        <li>
+                            <?php
+                            $url_resources = $this->url.$this->num_menu.$this->separator_arguments
+                            ."report_name=".self::$detail_report->report_name.$this->separator_arguments
+                            ."p_show=resources_table". $this->separator_arguments
+                            ."host=" . $_REQUEST['host'];
+                            ?>
+                            <a href="<?php echo $url_resources;?>"><i class="fa fa-folder-open fa-fw"></i> Ресурсы</a>
+                        </li>
+                        <li>
+                            <?php
+                            $url_content = $this->url.$this->num_menu.$this->separator_arguments
+                            ."report_name=".self::$detail_report->report_name.$this->separator_arguments
+                            ."p_show=content_table". $this->separator_arguments
+                            ."host=" . $_REQUEST['host'];
+                            ?>
+                            <a href="<?php echo $url_content;?>"><i class="fa fa-table fa-fw"></i> Контент</a>
+                        </li>
+                        <li>
+                            <?php
+                            $url_tags = $this->url.$this->num_menu.$this->separator_arguments
+                            ."report_name=".self::$detail_report->report_name.$this->separator_arguments
+                            ."p_show=tags_table". $this->separator_arguments
+                            ."host=" . $_REQUEST['host'];
+                            ?>
+                            <a href="<?php echo $url_tags;?>"><i class="fa fa-edit fa-fw"></i> Теги</a>
+                        </li>
+                        
+                    </ul>
                 </div>
+                <!-- /.sidebar-collapse -->
             </div>
-        </div>
-                <?php } ?>
+            <!-- /.navbar-static-side -->
+        </nav>
 
 
