@@ -10,6 +10,7 @@
     <link rel='stylesheet' type='text/css' href='css/style.css'/>
     <link rel='stylesheet' type='text/css' href='css/main.css'/>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.ico">
     <script language='javascript' type='text/javascript' src='/js/includejQuery_1_8_1.js'></script>
     <script language='javascript' type='text/javascript' src='/js/delete-update.js'></script>
     <script language='javascript' type='text/javascript' src='/js/bootstrap.js'></script>

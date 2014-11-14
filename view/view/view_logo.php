@@ -1,3 +1,3 @@
 <div class="logo">
-    <img src="images/logo5.png">
+    <img src="images/logo1.png">
 </div>
