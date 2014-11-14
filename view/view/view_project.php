@@ -22,8 +22,13 @@
         {?>
             <tr>
                 <td></td>
-                <td><?php echo $elem->site_name; ?></td>
-               <?php if($elem->exist_db)
+                <?php if(strlen($elem->site_name)>400){ ?>
+                    <td style="max-width: 400px;"><?php echo $elem->site_name; ?></td>  
+                <?php } 
+                else{?>
+                <td style="max-width: 400px;"><pre><?php echo $elem->site_name; ?></pre></td>
+                <?php }
+                if($elem->exist_db)
                    {
                ?>
                 <td><a href="<?php echo $this->url.$this->num_menu.'&site_report='.$elem->site_name ?>"><span class="table-icon"><i class="fa fa-file-text-o" style="line-height: 2;"></i></span></a></td>
