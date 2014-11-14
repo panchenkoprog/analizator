@@ -25,7 +25,7 @@ if(count(self::$ar_reports) > 0)
                 { ?>   
                 <td><?php echo $elem->date_stop_report; ?></td>
                 <td>проанализировано</td>
-                <td><a href="<?php echo $this->url.$this->num_menu.$this->separator_arguments."report_name=".$elem->report_name . $this->separator_arguments . "report_id=".$elem->report_id. $this->separator_arguments . "host=" . $elem->site_name; ?>">подробнее</a></td>
+                <td><a href="<?php echo $this->url.$this->num_menu.$this->separator_arguments."report_name=".$elem->report_name . $this->separator_arguments. "host=" . $elem->site_name; ?>">подробнее</a></td>
              <?php } 
                 elseif($elem->date_start_report && !$elem->date_stop_report)
                         {
