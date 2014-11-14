@@ -1,28 +1,41 @@
-<div>
-<span class="help-block"><b>Циклические ссылки проекта</b></span>
-<table>
-    <tr style="width: 1000px">
-        <th style="border: 1px solid coral; max-width: 250px;">страница</th>
-        <th style="border: 1px solid coral; max-width: 350px;">ссылается на</th>
-        <th style="border: 1px solid coral; max-width: 200px;">anchor</th>
-    </tr>
-<?php
-if(count(self::$detail_report->ar_cycle_links) > 0)
-{
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Циклические ссылки проекта</h2>
+    </div>
+</div>
 
-    foreach(self::$detail_report->ar_cycle_links as $page)
-    {
-        ?>
-        <tr style="width: 1000px">
-            <td style="border: 1px solid coral; max-width: 350px;"><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['href']; ?></a></td>
-            <td style="border: 1px solid coral; max-width: 350px;"><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['href']; ?></a></td>
-            <td style="border: 1px solid coral; max-width: 200px;"><?php echo $page['anchor']; ?></td>
-        </tr>
-    <?php
-    }
-}
-?>
-</table>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr style="width: 1000px">
+                        <th>страница</th>
+                        <th>ссылается на</th>
+                        <th>anchor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                    if(count(self::$detail_report->ar_cycle_links) > 0)
+                    {
+
+                        foreach(self::$detail_report->ar_cycle_links as $page)
+                        {
+                ?>
+                        <tr>
+                            <td style="max-width: 400px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['href']; ?></a></pre></td>
+                            <td style="max-width: 400px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['href']; ?></a></pre></td>
+                            <td><?php echo $page['anchor']; ?></td>
+                        </tr>
+                <?php
+                        }
+                    }
+                ?>
+               </tbody>
+            </table>
+         </div>
+      </div>
 </div>
 <?php
 if(count(self::$ar_a) > 1)//показываем пункты меню, если их больше одного

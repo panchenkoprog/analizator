@@ -2,6 +2,7 @@
      <div class="col-lg-12">
          <h2 class="page-header">Ссылки проекта</h2>
      </div>
+</div>
     
     
 <div class="row">
@@ -24,8 +25,8 @@
                                 {
                                 ?>
                                     <tr>
-                                        <td><?php echo $page['parent_url']; ?></td>
-                                        <td><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['href']; ?></a></td>
+                                        <td style="max-width: 400px;"><pre><?php echo $page['parent_url']; ?></pre></td>
+                                        <td style="max-width: 400px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['href']; ?></a></pre></td>
                                         <td><?php echo $page['anchor']; ?></td>
                                     </tr>
                                 <?php
@@ -33,7 +34,7 @@
                           }
                       ?>
                    </tbody>
-        </table>
+                </table>
        </div>
    </div>
 </div>

@@ -9,8 +9,8 @@
         <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover">
                 <thead>
-                    <tr style="width: 1000px">
-                        <th style="min-width: 350px;">URL</th>
+                    <tr>
+                        <th>URL</th>
                     <?php
                         foreach(self::$detail_report->ar_tags as $tag)
                         { ?>
@@ -25,7 +25,7 @@
                         {
                         ?>
                         <tr>
-                            <td><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></td>
+                            <td style="max-width: 600px"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></pre></td>
                         <?php
                             foreach(self::$detail_report->ar_tags as $tag)
                             {

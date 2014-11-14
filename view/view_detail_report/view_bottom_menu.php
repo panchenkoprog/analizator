@@ -1,6 +1,6 @@
 
 <div class="row">
-    <div class="col-lg-offset-3  col-lg-6">
+    <div class="col-lg-6">
         <div class="dataTables_paginate paging_simple_numbers">
             <ul class="pagination">
                 <?php foreach(self::$ar_a as $li){?>

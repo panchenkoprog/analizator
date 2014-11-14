@@ -1,51 +1,70 @@
-<div>
-<span class="help-block"><b>Отчёт по анализу контента</b></span>
-
-    <h3>Количество контента на страницах</h3>
-    <div>
-        <table>
-            <?php
-            if(count(self::$detail_report->ar_content_cs) > 0)
-            {
-                foreach(self::$detail_report->ar_content_cs as $cs_key => $cs_val)
-                {
-                    ?>
-                    <tr style="width: 1000px">
-                        <th style="border: 1px solid coral; max-width: 350px; font-size: 12px;">
-                            <?php echo $cs_key <= 6 ? ($cs_key-1)."-".$cs_key." тыс. символов" : "больше ".($cs_key-1)." тыс. символов"; ?>
-                        </th>
-                        <td style="border: 1px solid coral; max-width: 350px; font-size: 12px;"><?php echo $cs_val." стр."; ?></td>
-                    </tr>
-                <?php
-                }
-            }
-            ?>
-        </table>
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">Отчёт по анализу контента</h2>
     </div>
-    <br />
-    <div>
-        <table>
-            <tr style="width: 1000px">
-                <th style="border: 1px solid coral; max-width: 350px;">Url</th>
-                <th style="border: 1px solid coral; max-width: 150px;">кол. слов</th>
-                <th style="border: 1px solid coral; max-width: 150px;">кол. символов</th>
-            </tr>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Количество контента на страницах</div>
+            <div class="panel-body">
+                <div class="table-responsive table-bordered">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                    <?php
+                        if(count(self::$detail_report->ar_content_cs) > 0)
+                        {
+                            foreach(self::$detail_report->ar_content_cs as $cs_key => $cs_val)
+                            {
+                    ?>
+                                <tr>
+                                    <td>
+                                        <?php echo $cs_key <= 6 ? ($cs_key-1)."-".$cs_key." тыс. символов" : "больше ".($cs_key-1)." тыс. символов"; ?>
+                                    </td>
+                                    <td><?php echo $cs_val." стр."; ?></td>
+                                </tr>
+                    <?php
+                            }
+                        }
+                    ?>
+                         </tbody>
+                    </table>
+                </div>
+             </div>
+          </div>
+       </div>
+   </div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Url</th>
+                        <th>кол. слов</th>
+                        <th>кол. символов</th>
+                    </tr>
+                </thead>
             <?php
             if(count(self::$detail_report->ar_content_table) > 0)
             {
                 foreach(self::$detail_report->ar_content_table as $page)
                 {
                     ?>
-                    <tr style="width: 1000px">
-                        <td style="border: 1px solid coral; max-width: 350px; font-size: 12px;"><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></td>
-                        <td style="border: 1px solid coral; max-width: 350px; font-size: 12px;"><?php echo $page['count_words']; ?></td>
-                        <td style="border: 1px solid coral; max-width: 150px; font-size: 12px;"><?php echo $page['count_symbols']; ?></td>
+                    <tr>
+                        <td style="min-width: 400; max-width: 600px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></pre></td>
+                        <td style="max-width: 500px;"><?php echo $page['count_words']; ?></td>
+                        <td style="max-width: 150px;"><?php echo $page['count_symbols']; ?></td>
                     </tr>
                 <?php
                 }
             }
             ?>
+                    
         </table>
+        </div>
     </div>
 </div>
 <?php

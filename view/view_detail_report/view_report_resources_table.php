@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        <h2 class="page-header">Отчёт по загрузке</h2>
+        <h2 class="page-header">Отчёт по ресурсам</h2>
     </div>
 </div>
 
@@ -24,7 +24,7 @@
                     {
                         ?>
                         <tr>
-                            <td><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></td>
+                            <td style="max-width: 550px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></pre></td>
                         <?php
                             if($page['c_img'])
                             {

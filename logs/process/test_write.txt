@@ -28,3 +28,9 @@
 [test 2014-11-13 09:58:50]  file:R:\home\test58.stll.ru\www\model\process.php  line:96  length:79
 [test 2014-11-13 09:58:50]  file:R:\home\test58.stll.ru\www\model\process.php  line:99  ======================================
 [test 2014-11-13 09:58:50]  file:R:\home\test58.stll.ru\www\model\process.php  line:99  ======================================
+[test 2014-11-14 12:51:44]  file:Z:\home\stll.tt\www\model\process.php  line:92  length:79
+[test 2014-11-14 12:51:44]  file:Z:\home\stll.tt\www\model\process.php  line:92  length:79
+[test 2014-11-14 12:51:44]  file:Z:\home\stll.tt\www\model\process.php  line:96  length:79
+[test 2014-11-14 12:51:44]  file:Z:\home\stll.tt\www\model\process.php  line:96  length:79
+[test 2014-11-14 12:51:44]  file:Z:\home\stll.tt\www\model\process.php  line:99  ======================================
+[test 2014-11-14 12:51:44]  file:Z:\home\stll.tt\www\model\process.php  line:99  ======================================
