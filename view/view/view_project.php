@@ -23,6 +23,9 @@
             <tr>
                 <td></td>
                 <td><?php echo $elem->site_name; ?></td>
+               <?php if($elem->exist_db)
+                   {
+               ?>
                 <td><a href="<?php echo $this->url.$this->num_menu.'&site_report='.$elem->site_name ?>"><span class="table-icon"><i class="fa fa-file-text-o" style="line-height: 2;"></i></span></a></td>
                 <td><a href="<?php echo $this->url.$this->num_menu."&project_tools=tools&site_db_name=".$elem->site_db_name;?>"><span class="table-icon"><i class="fa fa-cogs" style="line-height: 2;"></i></span></a></td>
                 <td> <?php
@@ -44,6 +47,11 @@
                     }
                     ?>
                 </td>
+                   <?php }
+                   else{
+                       ?>
+                       <td colspan="4"><span style="color: coral;">Ошибка базы данных</span></td>
+                   <?php } ?>
             </tr>
             </tbody>
         <?php
