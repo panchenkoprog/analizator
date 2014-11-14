@@ -22,7 +22,7 @@
         {?>
             <tr>
                 <td></td>
-                <?php if(strlen($elem->site_name)>400){ ?>
+                <?php if(mb_strlen($elem->site_name)>100){ ?>
                     <td style="max-width: 400px;"><pre><?php echo $elem->site_name; ?></pre></td>
                 <?php } 
                 else{?>
