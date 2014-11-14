@@ -9621,59 +9621,60 @@ class Model extends Service
 
                 //даём знать что сайт проанализирован !!!
                 //открываем новое соединение - ВНИМАНИЕ 4-параметр для нового соединения == true!!!
-                $tmp_link = mysql_connect($this->host, $this->root_login, $this->root_password, true) or die ('Ошибка');
-                //mysql_select_db($sp->site_db_name, $tmp_link) or die("Ошибка подключения к БД");
-                if(!mysql_select_db($sp->site_db_name, $tmp_link))
+                if($tmp_link = mysql_connect($this->host, $this->root_login, $this->root_password, true))
                 {
-                    if(SHOW_ECHO_ERROR)
-                        Log::write( "<p> Ошибка подключения к БД ".mysql_errno()." файл ".__FILE__."  стр. ".__LINE__."</p>", $this->host_site );
-                    exit();
-                }
-                mysql_query("SET NAMES utf8", $tmp_link); // теперь всё будет сохранятся в MySql правильной кодировке
+                    if(mysql_select_db($sp->site_db_name, $tmp_link))
+                    {
+                        $sp->exist_db = 1;
 
-                $tmp_sel = "select flag from ".$this->tb_toggle." where id=1";
-                $tmp_res = mysql_query($tmp_sel, $tmp_link);
+                        mysql_query("SET NAMES utf8", $tmp_link); // теперь всё будет сохранятся в MySql правильной кодировке
 
-                if(mysql_errno())
-                {
-                    if(SHOW_ECHO_ERROR)
-                        Log::write( "<p> ошибка ".mysql_errno()." при извлечении данных из БД ! файл: ".__FILE__."  стр. ".__LINE__."</p>", $this->host_site );
-                    exit();
-                }
-                else
-                {
-                    $tmp_row = mysql_fetch_array($tmp_res, MYSQL_ASSOC);
-                    $sp->analyze = intval($tmp_row['flag']);
-                }
+                        $tmp_sel = "select flag from ".$this->tb_toggle." where id=1";
+                        $tmp_res = mysql_query($tmp_sel, $tmp_link);
 
-                //даём знать что есть хотя бы один отчёт об анализе сайта !!!
-                //открываем новое соединение - ВНИМАНИЕ 4-параметр для нового соединения == true!!!
-                $tmp_link2 = mysql_connect($this->host, $this->root_login, $this->root_password, true) or die ('Ошибка');
-                //mysql_select_db(self::$service_db_name, $tmp_link2) or die("Ошибка подключения к БД");
-                if(!mysql_select_db(self::$service_db_name, $tmp_link2))
-                {
-                    if(SHOW_ECHO_ERROR)
-                        Log::write( "<p> Ошибка подключения к БД ".mysql_errno()." файл ".__FILE__."  стр. ".__LINE__."</p>", $this->host_site );
-                    exit();
-                }
-                mysql_query("SET NAMES utf8", $tmp_link2); // теперь всё будет сохранятся в MySql правильной кодировке
+                        if(mysql_errno())
+                        {
+                            if(SHOW_ECHO_ERROR)
+                                Log::write( "<p> ошибка ".mysql_errno()." при извлечении данных из БД ! файл: ".__FILE__."  стр. ".__LINE__."</p>", $this->host_site );
+                            exit();
+                        }
+                        else
+                        {
+                            $tmp_row = mysql_fetch_array($tmp_res, MYSQL_ASSOC);
+                            $sp->analyze = intval($tmp_row['flag']);
+                        }
 
-                $tmp_sel2 = "select count(*) from ".self::$service_table_name_report
-                    ." where ".self::$service_field_report_user_id."=".$_SESSION['id']
-                    ." and ".self::$service_field_report_name." like '".$sp->site_db_name."%'";
+                        //даём знать что есть хотя бы один отчёт об анализе сайта !!!
+                        //открываем новое соединение - ВНИМАНИЕ 4-параметр для нового соединения == true!!!
+                        if($tmp_link2 = mysql_connect($this->host, $this->root_login, $this->root_password, true))
+                        {
+                            if(!mysql_select_db(self::$service_db_name, $tmp_link2))
+                            {
+                                if(SHOW_ECHO_ERROR)
+                                    Log::write( "<p> Ошибка подключения к БД ".mysql_errno()." файл ".__FILE__."  стр. ".__LINE__."</p>", $this->host_site );
+                                exit();
+                            }
+                            mysql_query("SET NAMES utf8", $tmp_link2); // теперь всё будет сохранятся в MySql правильной кодировке
 
-                $tmp_res2 = mysql_query($tmp_sel2, $tmp_link2);
+                            $tmp_sel2 = "select count(*) from ".self::$service_table_name_report
+                                ." where ".self::$service_field_report_user_id."=".$_SESSION['id']
+                                ." and ".self::$service_field_report_name." like '".$sp->site_db_name."%'";
 
-                if(mysql_errno())
-                {
-                    if(SHOW_ECHO_ERROR)
-                        Log::write( "<p> ошибка ".mysql_errno()." при извлечении данных из БД ! файл: ".__FILE__."  стр. ".__LINE__."</p>", self::$service_db_name );
-                    exit();
-                }
-                elseif(mysql_num_rows($tmp_res2)>0)
-                {
-                    $tmp_row2 = mysql_fetch_row($tmp_res2);
-                    $sp->report = intval($tmp_row2[0]);
+                            $tmp_res2 = mysql_query($tmp_sel2, $tmp_link2);
+
+                            if(mysql_errno())
+                            {
+                                if(SHOW_ECHO_ERROR)
+                                    Log::write( "<p> ошибка ".mysql_errno()." при извлечении данных из БД ! файл: ".__FILE__."  стр. ".__LINE__."</p>", self::$service_db_name );
+                                exit();
+                            }
+                            elseif(mysql_num_rows($tmp_res2)>0)
+                            {
+                                $tmp_row2 = mysql_fetch_row($tmp_res2);
+                                $sp->report = intval($tmp_row2[0]);
+                            }
+                        }
+                    }
                 }
 
                 self::$ar_projects[] = $sp;

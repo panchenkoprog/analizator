@@ -1,6 +1,7 @@
 <?php
 class ServiceProject
 {
+    public $exist_db     = 0;//проверка на наличие БД
     public $analyze      = 0;//проанализирован сайт или нет
     public $report       = 0;//есть ли отчёты в таблице service_report для соответствующего сайта
 
