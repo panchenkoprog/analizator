@@ -30,7 +30,7 @@
                                 {
                      ?>
                                     <tr>
-                                        <td style="max-width: 600px;"><pre><?php echo $page['href']; ?><pre></td>
+                                        <td style="min-width: 300px; max-width: 600px;"><pre><?php echo $page['href']; ?><pre></td>
                                         <td><?php echo $page['anchor']; ?></td>
                                     </tr>
                      <?php

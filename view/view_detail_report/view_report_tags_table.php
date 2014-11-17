@@ -25,7 +25,7 @@
                         {
                         ?>
                         <tr>
-                            <td style="max-width: 600px"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></pre></td>
+                            <td style="min-width: 300px; max-width: 600px"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></pre></td>
                         <?php
                             foreach(self::$detail_report->ar_tags as $tag)
                             {

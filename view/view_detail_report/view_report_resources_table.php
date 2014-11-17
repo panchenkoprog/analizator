@@ -24,7 +24,7 @@
                     {
                         ?>
                         <tr>
-                            <td style="max-width: 550px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></pre></td>
+                            <td style="min-width: 300px; max-width: 550px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></pre></td>
                         <?php
                             if($page['c_img'])
                             {

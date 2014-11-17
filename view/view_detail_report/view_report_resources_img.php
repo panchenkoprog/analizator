@@ -35,7 +35,7 @@
                             {
                     ?>
                                 <tr>
-                                    <td style="max-width: 500px;"><pre><?php echo $page['src']; ?></pre></td>
+                                    <td style="min-width: 300px; max-width: 500px;"><pre><?php echo $page['src']; ?></pre></td>
                                     <td><?php echo $page['title']?$page['title']:''; ?></td>
                                     <td><?php echo $page['count_word_title']?$page['count_word_title']:''; ?></td>
                                     <td><?php echo $page['alt']?$page['alt']:''; ?></td>

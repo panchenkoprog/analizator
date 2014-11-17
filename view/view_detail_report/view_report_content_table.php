@@ -55,7 +55,7 @@
                     ?>
                     <tr>
                         <td style="min-width: 400; max-width: 600px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></pre></td>
-                        <td style="max-width: 500px;"><?php echo $page['count_words']; ?></td>
+                        <td style="min-width: 300px; max-width: 500px;"><?php echo $page['count_words']; ?></td>
                         <td style="max-width: 150px;"><?php echo $page['count_symbols']; ?></td>
                     </tr>
                 <?php

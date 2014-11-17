@@ -26,7 +26,7 @@
             {
                 ?>
                 <tr>
-                    <td style="max-width: 450px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></pre></td>
+                    <td style="min-width: 300px; max-width: 450px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></pre></td>
                     <td><?php echo $page['level_links']; ?></td>
                     <td><?php echo $page['http_code']; ?></td>
                     <td><?php echo round( ($page['page_speed'] / 1000) , 1); ?></td>

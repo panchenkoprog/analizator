@@ -25,8 +25,8 @@
                                 {
                                 ?>
                                     <tr>
-                                        <td style="max-width: 400px;"><pre><?php echo $page['parent_url']; ?></pre></td>
-                                        <td style="max-width: 400px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['href']; ?></a></pre></td>
+                                        <td style="min-width: 300px; max-width: 400px;"><pre><?php echo $page['parent_url']; ?></pre></td>
+                                        <td style="min-width: 300px; max-width: 400px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['href']; ?></a></pre></td>
                                         <td><?php echo $page['anchor']; ?></td>
                                     </tr>
                                 <?php

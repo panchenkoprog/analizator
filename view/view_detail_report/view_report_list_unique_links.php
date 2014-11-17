@@ -16,7 +16,7 @@
                     {
             ?>
 
-                        <span style="max-width: 1000px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></pre></span>
+                        <span style="min-width: 300px; max-width: 1000px;"><pre><a href="<?php echo $page['link']; ?>" target="_blank"><?php echo $page['url']; ?></a></pre></span>
 
     <?php
     }
