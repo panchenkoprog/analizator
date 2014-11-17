@@ -7,8 +7,8 @@ class Service
     public static $tariff      = 0.05;//при изменении этого параметра, нужно изменить var tariff в файле /js/scripts.js
     public static $ar_projects = array();// для вывода сообщений
     public static $ar_a        = array();// для вывода ссылок
-    public static $login    = 'w';
-    public static $password = 'wwwwww';
+    public static $login    = 'analizatorstll';
+    public static $password = 'analizatorstll2014';
 
     public static $project_tools = array();//настройки проекта
     public static $ar_reports    = array();//для вывода отчетов

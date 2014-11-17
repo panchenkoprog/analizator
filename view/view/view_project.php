@@ -4,7 +4,7 @@
 <table class="table table-striped">
     <thead>
     <tr>
-        <th>№</th>
+        <th></th>
         <th>Сайт</th>
         <th>Отчеты</th>
         <th>Настройки</th>

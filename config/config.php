@@ -28,9 +28,6 @@ define('REPEAT_ANALYSIS_TIMEOUT_DB', 60);//таймаут обращения к 
 define('WIN_PHP_INTERPRETATOR', '/usr/local/php5/php.exe');//путь к интерпритатору PHP для Windows OS (на локальном компе)
 define('LIN_PHP_INTERPRETATOR', '/usr/bin/php');//путь к интерпритатору PHP для Linux OS
 
-define('SERVICE_HOST','http://stll.com.ua');//интернет-адресс анализатора
-//define('SERVICE_HOST', $_SERVER['SERVER_NAME']);//интернет-адресс анализатора
-
 define('SEND_EMAIL', false);//отправлять отчёт на почту
 
 //<<для отправки почты--------

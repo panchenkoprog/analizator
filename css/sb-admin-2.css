@@ -352,3 +352,19 @@ pre{
     background: none;
     border: none;
 }
+
+.admin-logo{
+    position: absolute;
+    margin: -10px 0 0 20px;
+    width: 80px;
+    float: left;
+}
+
+.admin-slogan
+{
+    position: absolute;
+    margin: 12px 0 0 55px;
+    font-size: 10px;
+    color: #000000;
+    float: left;
+}

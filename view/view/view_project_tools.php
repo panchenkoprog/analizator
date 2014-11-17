@@ -1,4 +1,4 @@
-<span class="help-block">Настройки проекта</span>
+<h1>Настройки проекта</h1>
 <?php
 if(count(self::$project_tools) > 0)
 {?>

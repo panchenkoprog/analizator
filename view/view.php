@@ -32,6 +32,7 @@ class View extends Service
     public $title     = '';
     public $num_menu  = 0;
     public $url       = '';
+    public $url_report= '';
     public $session   = 0;
     public $result    = '';
     public $admin     = 0;
@@ -55,11 +56,12 @@ class View extends Service
 
         $this->session = $session;
         $this->result  = $result;
+        $this->num_menu = $num_menu;
 
         //если пункт меню ПРОЕКТЫ -> ОТЧЁТЫ
-        if($num_menu == 1 && isset($_REQUEST['site_report']) && $_REQUEST['site_report'] != '')
+        if($this->num_menu == 1 && isset($_REQUEST['site_report']) && $_REQUEST['site_report'] != '')
         {
-            $this->url = $this->separator_p
+            $this->url_report = $this->separator_p
                 . $this->current_detail_file
                 . $this->separator_q
                 . $this->page
@@ -67,14 +69,18 @@ class View extends Service
         }
         else
         {
-            $this->url = $this->separator_p
+            $this->url_report = $this->separator_p
                 . $this->current_file
                 . $this->separator_q
                 . $this->page
                 . $this->separator_v;
         }
 
-        $this->num_menu = $num_menu;
+        $this->url = $this->separator_p
+            . $this->current_file
+            . $this->separator_q
+            . $this->page
+            . $this->separator_v;
 
         if($this->session)
         {

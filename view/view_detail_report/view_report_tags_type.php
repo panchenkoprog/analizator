@@ -16,7 +16,7 @@
         <div class="panel panel-success">
             <div class="panel-heading"><?php echo self::$detail_report->name_current_tag; ?></div>
             <div class="panel-body">
-                <p style="padding-left: 10px;">Количество: <?php echo self::$detail_report->count_fields_tag; ?></p>
+                <p style="padding-left: 10px;">Количество: <?php echo count(self::$detail_report->ar_current_tags); ?></p>
                 <pre>URL : <?php echo self::$detail_report->from_page; ?></pre>
                 
                 <div class="table-responsive">

@@ -216,8 +216,8 @@ class Model extends Service
     public $timeout_scan         = null; //время между сканированием
     public $robots               = 0;    //проверка robots.txt (1 - включена, 0 - нет)
     public $user_id_session      = 0;    //id под которым зарегестрирован user и который находится в $_SESSION['id']
-    public $per_page             = 100;    //количество выводимых на странице записей.
-    public $row_page             = 100;   //количество выводимых строк в таблице на одной странице.
+    public $per_page             = 5;    //количество выводимых на странице записей.
+    public $row_page             = 5;   //количество выводимых строк в таблице на одной странице.
     public $count_navigate_menu  = 3;    //количество пунктов меню в navigate_menu (bottom_menu)
 
     //-------строки шаблоны из которых формируются MIX-строки-----------
@@ -8342,7 +8342,7 @@ class Model extends Service
             parent::SetErrors('password', 'указали пароль слишком короткий');
             return false;
         }
-        elseif(mb_strlen($user_str) > 16)
+        elseif(mb_strlen($user_str) > 20)
         {
             parent::SetErrors('password', 'указали пароль слишком длинный');
             return false;

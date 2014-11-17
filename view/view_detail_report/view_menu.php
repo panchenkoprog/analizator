@@ -6,7 +6,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">MAS analizator</a>
+                <a class="navbar-brand" href="index.php"><img class="admin-logo" src="images/logo4.png">&nbsp;<span class="admin-slogan">Разложим сайт на малекулы.</span></a>
             </div>
             <!-- /.navbar-header -->
 
