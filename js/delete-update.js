@@ -521,7 +521,7 @@ jQuery(document).ready(function()
     {
         jQuery.post('captcha/calculate.php', null , function(data)
         {
-            jQuery('span#captcha').text( data.key );
+            jQuery('span#another').text( data.key );
         }, 'json');
         jQuery('#error_captcha').text('');
     });

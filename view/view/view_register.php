@@ -26,15 +26,15 @@
             </div>
 
             <div class="box-form">
-                <div class="box">
+                <div class="box caption">
                     <!--<img src='captcha/captcha.php<?php /*echo '?key='.$_SESSION['key'];*/?>' id='capcha-image'/>-->
-                    <span id="captcha"><?php echo captcha(); ?></span>
-                    <span id="another">Показать другую картинку</span>
+                    <!--<span id="captcha"><?php //echo captcha(); ?></span>-->
+                    <span id="another"><?php echo captcha(); ?></span>
                 </div>
                 
                 <div class="box two">   
                     <span class="icon"><i class="fa fa-picture-o" style="line-height: 2;"></i></span>
-                    <input type="text" id="capt" name="capt" maxlength="50" placeholder="Введите captcha…" data-trigger="manual" data-toggle="tooltip" data-placement="right" data-title="Обязательное поле" autocomplete="off"/>
+                    <input type="text" id="capt" name="capt" maxlength="50" placeholder="Введите ответ…" data-trigger="manual" data-toggle="tooltip" data-placement="right" data-title="Обязательное поле" autocomplete="off"/>
                     <!--<span id="error_capt" class="text-error"><?php /*echo parent::GetErrors('captcha'); */?></span>-->
                 </div>
                 <div class="two">

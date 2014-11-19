@@ -434,3 +434,19 @@ div.projects{
     background: #b5ead6;
     border: 1px solid #a9e1cb;
 }
+.caption{
+    width: 180px;
+    padding-left: 70px;
+    margin-top: -5px;
+}
+#another{
+    background: rgba(89, 212, 171, 0.5);
+    padding: 6px 35px;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+}
+
+#another:hover{
+    background: rgba(89, 212, 171, 0.3);
+}
