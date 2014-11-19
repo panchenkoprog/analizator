@@ -37,7 +37,7 @@
                     <!--<span id="error_capt" class="text-error"><?php /*echo parent::GetErrors('captcha'); */?></span>-->
                 </div>
                 <div class="two">
-                    <button type="submit" name="reg" class="button-login" style="margin-left: 125px;">Зарегестрировать</button>
+                    <button type="submit" name="reg" class="button-login" style="margin-left: 76px; width:305px;">Зарегестрировать</button>
                 </div>
             </div>
         </form>

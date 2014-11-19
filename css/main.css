@@ -115,14 +115,14 @@ pre{
 .box .icon{
     position: absolute;
     margin-left: 17px;
-    margin-top: 17px;
+    margin-top: 3px;
     z-index: 1;
     color:rgba(51, 204, 153, 1);
 }
 
 .box input{
     width: 250px;
-    height: 50px;
+    height: 20px;
     background: #f9fcfb; /*#2b303b;*/
     border:none;
     font-size: 14px;
@@ -150,7 +150,7 @@ pre{
 .button-login{
     color: #ffffff;
     font-size: 20px;
-    height: 61px;
+    height: 31px;
     padding: 0px 20px;
     margin-left: 75px;
     background-color: #33CC99;
@@ -295,7 +295,7 @@ div.projects{
 /* анализ сайта */
 .assay{
     margin-top: -20px;
-    height: 100px;
+    height: 75px;
     background-color: rgba(255, 184, 64, 0.8);
 }
 
@@ -319,7 +319,7 @@ div.projects{
 .button-assay{
     color: #ffffff;
     font-size: 20px;
-    height: 61px;
+    height: 31px;
     padding: 0px 20px;
     margin-left: 125px;
     background-color: #FFB840;
