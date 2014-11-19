@@ -1,4 +1,4 @@
-<?php $_SESSION['key'] = md5((string)rand());?>
+<?php //$_SESSION['key'] = md5((string)rand()); ?>
 <div id="panel-reg" class="block" style="display: none;">
     <div class="container">
         <form id="form-register" <?php echo "action='".$this->url.$this->num_menu."' enctype='multipart/form-data' method='POST'";?> >
@@ -27,7 +27,8 @@
 
             <div class="box-form">
                 <div class="box">
-                    <img src='captcha/captcha.php<?php echo '?key='.$_SESSION['key'];?>' id='capcha-image'/>
+                    <!--<img src='captcha/captcha.php<?php /*echo '?key='.$_SESSION['key'];*/?>' id='capcha-image'/>-->
+                    <span id="captcha"><?php echo captcha(); ?></span>
                     <span id="another">Показать другую картинку</span>
                 </div>
                 

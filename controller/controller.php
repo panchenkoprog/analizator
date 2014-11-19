@@ -40,7 +40,7 @@ class Controller
                 $_SESSION = array();
                 //если после окончания сессии попадаешь на страницу "регистрация" - нужно закоментить вызов session_destroy()
                 //если на страницу "вход" - session_destroy() должен присутствовать
-                session_destroy();
+                //session_destroy(); // закоментим, так как на данный момент у нас и Вход и Регистрация на одной странице!
             }
             $this->session = 0;
             $this->view->ViewInit(0, $this->session);

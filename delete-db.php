@@ -3,7 +3,7 @@ set_time_limit(2147483647);
 $db_name       = '' ;
 $host          = 'localhost';//'10.100.53.2';//'localhost' ;
 $root_login    = 'root' ;
-$root_password = '' ;	//test
+$root_password = '' ;	//test  //j73jS03#FdasWrfj1scCs_dwue1x
 $link          = '' ;
 $service       = 'service';
 $prefix_db     = 'service_';

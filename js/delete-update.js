@@ -507,11 +507,21 @@ jQuery(document).ready(function()
     });*/
     
     //меняем картинку капчи
-    jQuery('#another').click(function()
+    /*jQuery('#another').click(function()
     {
         jQuery.post('captcha/another.php', {"key":true}, function(data)
         {
             jQuery('#capcha-image').attr('src', 'captcha/captcha.php?key='+data.key );
+        }, 'json');
+        jQuery('#error_captcha').text('');
+    });*/
+
+    //меняем уравнение капчи
+    jQuery('#another').click(function()
+    {
+        jQuery.post('captcha/calculate.php', null , function(data)
+        {
+            jQuery('span#captcha').text( data.key );
         }, 'json');
         jQuery('#error_captcha').text('');
     });

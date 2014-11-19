@@ -55,3 +55,21 @@ $MODEL_DEFINE_TAGS = array(
     'b' => true,
     'strong' => true
 );
+
+function captcha()
+{
+    $d1 = rand(1,20);
+    $d2 = rand(1,20);
+
+    if($d1 > $d2)
+    {
+        $_SESSION['key'] = $d1 . ' - ' . $d2 . ' = ';
+        $_SESSION['code'] = (string)($d1 - $d2);
+    }
+    else
+    {
+        $_SESSION['key'] = $d1 . ' + ' . $d2 . ' = ';
+        $_SESSION['code'] = (string)($d1 + $d2);
+    }
+    return $_SESSION['key'];
+}
